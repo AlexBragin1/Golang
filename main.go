@@ -100,11 +100,12 @@ func strToInt(digits string) (int, error) {
 
 // проверка является число
 func isArabic(numbers string) bool {
+	flag := true
 	_, err := strToInt(numbers)
 	if err != nil {
-		return false
+		flag = false
 	}
-	return true
+	return flag
 }
 
 // функция проверяет ограничений  на операнды
