@@ -61,18 +61,18 @@ func isRoman(number string) bool {
 
 // фунция переводит из целого числа в строку
 func intToRoman(number int) string {
-	valores := []int{100, 90, 50, 40, 10, 9, 5, 4, 1}
-	simbolos := []string{"C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}
+	value := []int{100, 90, 50, 40, 10, 9, 5, 4, 1}
+	simbol := []string{"C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}
 
-	resultado := ""
+	strRoman := ""
 
-	for i := 0; i < len(valores); i++ {
-		for number >= valores[i] {
-			resultado += simbolos[i]
-			number -= valores[i]
+	for i := 0; i < len(value); i++ {
+		for number >= value[i] {
+			strRoman += simbol[i]
+			number -= value[i]
 		}
 	}
-	return resultado
+	return strRoman
 }
 
 // функция перевода из римского числа в целое
